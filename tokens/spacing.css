@@ -23,12 +23,10 @@
   --pill-h: 42px;
   --chip-h: 50px;
   --band-h: 43px;
-  --badge-w: 182px;
-  --badge-h: 63px;
 
   /* ---- radii ---- */
   --radius-card: 10px;       /* 섹션 카드 */
   --radius-bar: 10px;        /* Takeaway 바 */
   --radius-pill: 999px;      /* 섹션 필 (캡슐) */
-  --radius-none: 0;          /* 칩·배지·개체 박스는 직각 */
+  --radius-none: 0;          /* 칩·개체 박스는 직각 */
 }

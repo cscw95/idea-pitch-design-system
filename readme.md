@@ -17,7 +17,7 @@
 
 | Zone | 내용 | 규칙 |
 |------|------|------|
-| ① Header | `덱이름 \| 섹션명` + 발표자 배지(BLUE) + 2px 룰 | 섹션명은 ①②③ 원문자 넘버링 |
+| ① Header | `덱이름 \| 섹션명` + 2px 룰 | 섹션명은 ①②③ 원문자 넘버링 |
 | ② Governing Headline | 35px EB 중앙 한 줄 | 슬라이드의 **'판단'** — 10어절 이내 |
 | ③ Section Cards | 좌 메인(576px) + 우 서브 스택(588px) | 카드 상단에 NAVY 필 라벨이 테두리에 걸침 |
 | ④ Takeaway Bar | NAVY 바 + 흰색 EB 결론 | **'행동 함의'** — Headline과 다른 문장 |
@@ -27,7 +27,7 @@
 ## 컬러 — 정보의 '시제'를 색으로 구분
 
 - **NAVY `#1F3864`** — 유일한 지배색. 섹션 필, 라벨 칩, 결론 바, 계획 개체.
-- **BLUE `#1273C4`** — 발표자 배지, 포인트 액션 전용.
+- **BLUE `#1273C4`** — 포인트 액션·링크 전용.
 - **SKY `#DCE7F2`** — 강조 밴드(카드 내 중간 결론).
 - **STEEL `#8C96A0`** — 현황·레거시 개체.
 - **RED `#C00000`** — '지금' 시점 마커. **슬라이드당 1개.**
@@ -41,7 +41,7 @@
 
 | 토큰 | 웹 (CDN) | PPT (로컬 설치) | 용도 |
 |------|----------|-----------------|------|
-| `eb` | NanumSquare 800 | NanumSquareOTF_ac ExtraBold | Headline · 필 · 칩 · Takeaway · 배지 |
+| `eb` | NanumSquare 800 | NanumSquareOTF_ac ExtraBold | Headline · 필 · 칩 · Takeaway |
 | `b` | NanumSquare 700 | NanumSquareOTF_ac Bold | 카드 서브헤드, 칩 행 제목 |
 | `r` | NanumSquare 400 | NanumSquareOTF_ac | 본문, 캡션 |
 | `l` | NanumSquare 300 | NanumSquareOTF_ac Light | 보조(선택) |

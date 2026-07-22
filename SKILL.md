@@ -1,5 +1,5 @@
 ---
-name: idea-pitch-design
+name: skt-ppt
 description: Idea Pitch(경영진 보고·아이디어 피칭) 슬라이드를 이 디자인 시스템으로 생성할 때 사용한다. NAVY 지배 라이트 테마, 4-Zone 레이아웃, 정보 시제 규칙, 나눔스퀘어 서체 체계를 포함하며 HTML 슬라이드와 python-pptx 두 산출 경로를 제공한다.
 user-invocable: true
 ---

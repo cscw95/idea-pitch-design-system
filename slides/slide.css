@@ -18,14 +18,6 @@ html, body { margin: 0; }
 .header .section { font-size: var(--fs-section); font-weight: var(--w-eb); }
 .rule { position: absolute; left: var(--margin-x); right: var(--margin-x);
         top: var(--zone-rule-y); height: 2px; background: var(--ink); }
-.badge {
-  position: absolute; right: 38px; top: 17px;
-  width: var(--badge-w); height: var(--badge-h); background: var(--blue);
-  color: var(--text-invert); display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 2px;
-}
-.badge .a { font-size: 19px; font-weight: var(--w-eb); }
-.badge .t { font-size: 13px; }
 
 /* ── ② Governing Headline ── */
 .headline {
