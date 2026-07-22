@@ -1,6 +1,7 @@
 /* Idea Pitch — Color System
    NAVY(#1F3864) 1색 지배의 라이트 퍼스트 컨설팅 덱 팔레트.
-   정보의 '시제'를 색·선 스타일로 구분한다 (과거 STEEL / 계획 NAVY / 미확정 점선). */
+   정보의 '시제'를 색·선 스타일로 구분한다 (과거 STEEL / 계획 NAVY / 미확정 점선).
+   SKT 브랜드 마크(footer·간지)는 RED(#EA002C) / ORANGE(#FF7A00)를 사용한다. */
 :root {
   /* ---- Brand core ---- */
   --navy: #1f3864;        /* 지배색 — 섹션 필, 칩, 결론 바, 계획 개체 */
@@ -23,6 +24,10 @@
   --steel: #8c96a0;       /* 현황·레거시 개체 (과거 시제) */
   --red:   #c00000;       /* '지금' 시점 마커 — 슬라이드당 1개 */
 
+  /* ---- SKT brand mark (footer · 간지) ---- */
+  --skt-red:    #ea002c;  /* SK 심볼 red */
+  --skt-orange: #ff7a00;  /* telecom 워드마크 orange */
+
   /* ---- Surfaces & text ---- */
   --bg-app:        #ffffff;
   --surface-card:  #ffffff;
@@ -31,10 +36,13 @@
   --ink:           #1a1a1a;   /* 본문/헤드라인 */
   --text-primary:  var(--ink);
   --text-secondary:#4a4a4a;
-  --text-muted:    #7f7f7f;   /* 보조 설명, → 파생 문장 */
+  --text-muted:    #7f7f7f;   /* 보조 설명, → 파생 문장, footer */
   --text-link:     var(--blue);
   --text-link-hover: var(--navy);
   --text-invert:   #ffffff;
+
+  /* ---- footer & chrome ---- */
+  --footer-line: #e3e6ea;     /* footer 상단 헤어라인 */
 
   /* ---- 정보 시제(tense) 토큰 ---- */
   --tense-past:   var(--steel);            /* 채움 — 현황/레거시 */
