@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Idea Pitch — Design System</title>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+body{margin:0;background:var(--surface-tint);color:var(--text-primary);font-family:var(--font-sans)}
+a{color:var(--text-link);text-decoration:none}a:hover{color:var(--text-link-hover)}
+header{padding:56px 40px 32px;max-width:1480px;margin:0 auto}
+.mark{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+.mark .pillm{background:var(--navy);color:#fff;font-weight:800;font-size:15px;padding:8px 22px;border-radius:999px}
+.mark .badgem{background:var(--blue);color:#fff;font-weight:800;font-size:13px;padding:8px 14px}
+h1{font-size:34px;font-weight:800;letter-spacing:-.01em;margin:0;color:var(--navy)}
+.sub{color:var(--text-secondary);margin-top:10px;font-size:15px;max-width:720px;line-height:1.6}
+main{max-width:1480px;margin:0 auto;padding:0 40px 80px}
+h2{font-size:20px;font-weight:800;margin:44px 0 16px;padding-bottom:10px;border-bottom:1px solid var(--border-subtle);color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(460px,1fr));gap:20px}
+.card{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:10px;overflow:hidden;display:block}
+.card .frame{position:relative;width:100%;overflow:hidden;background:#eef0f3}
+.card iframe{position:absolute;top:0;left:0;border:0;transform-origin:top left;pointer-events:none}
+.card img{display:block;width:100%}
+.card .meta{padding:12px 16px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:1px solid var(--border-subtle)}
+.card .n{font-size:14px;font-weight:800}
+.card .s{font-size:12px;color:var(--text-muted);text-align:right}
+footer{max-width:1480px;margin:0 auto;padding:0 40px 60px;color:var(--text-muted);font-size:13px;line-height:1.7}
+</style></head><body>
+<header>
+<div class="mark"><span class="pillm">Idea Pitch</span><span class="badgem">Design System</span></div>
+<h1>Idea Pitch — Design System</h1>
+<div class="sub">NAVY #1F3864 지배의 라이트 퍼스트 컨설팅 덱 디자인 시스템. Header → Governing Headline → Section Cards → Takeaway Bar의 4-Zone 구조와 정보 시제(과거 STEEL / 계획 NAVY / 미확정 점선) 규칙 위에 세워졌다. 기본 서체는 <a href="https://hangeul.naver.com/fonts/search?f=nanum" target="_blank">나눔스퀘어</a>. 각 카드를 클릭하면 원본을 볼 수 있으며, 동일 시스템의 <b>python-pptx 생성기</b>가 <a href="ppt/generate_template.py">ppt/</a>에 포함된다. 가이드는 <a href="readme.md">readme.md</a> 참고.</div>
+</header>
+<main id="main"></main>
+<footer>
+Font: 나눔스퀘어 NanumSquare (웹: CDN · PPT: NanumSquareOTF_ac 로컬 설치) — PPT 산출물: <a href="ppt/idea_pitch_template.pptx">idea_pitch_template.pptx</a> · 생성기: <a href="ppt/generate_template.py">generate_template.py</a> · 스펙: <a href="ppt/DESIGN_SYSTEM.md">DESIGN_SYSTEM.md</a>
+</footer>
+<script>
+const groups = {
+ "Colors": [
+  ["guidelines/color-core.card.html","Core Palette","NAVY · BLUE · SKY · STEEL · RED",700,170],
+  ["guidelines/color-tense.card.html","정보 시제(Tense) 규칙","과거 STEEL · 계획 NAVY · 미확정 점선",700,170]],
+ "Type": [
+  ["guidelines/type-scale.card.html","나눔스퀘어 Type Scale","EB 800 / B 700 / R 400",700,260]],
+ "Layout": [
+  ["guidelines/layout-zones.card.html","4-Zone 레이아웃","Header → Headline → Cards → Takeaway",700,420]],
+ "Components": [
+  ["guidelines/components.card.html","핵심 컴포넌트","Pill Card · Chip Row · Band · Timeline · Entity · Track",700,430]],
+ "Slides (HTML)": [
+  ["slides/diagnosis.slide.html","진단형 — 상황 인식","칩 행 스택 + 타임라인 + 구조 비교",1280,720],
+  ["slides/proposal.slide.html","제언형 — 방향성 제언","전환 다이어그램 + Two-Track",1280,720],
+  ["slides/blank.slide.html","빈 템플릿","1+2 구성 스타터",1280,720]],
+ "PPT Template (python-pptx)": [
+  ["docs/templates/05-idea-pitch.png","진단형 예시 (.pptx)","generate_template.py 렌더링",1280,720],
+  ["docs/templates/06-idea-pitch.png","제언형 예시 (.pptx)","generate_template.py 렌더링",1280,720],
+  ["docs/templates/02-idea-pitch.png","디자인 토큰 슬라이드","pptx 내장 가이드",1280,720],
+  ["docs/templates/07-idea-pitch.png","빈 템플릿 (.pptx)","복제용 스타터",1280,720]]
+};
+const main = document.getElementById('main');
+for (const [g, cards] of Object.entries(groups)) {
+  const h = document.createElement('h2'); h.textContent = g; main.appendChild(h);
+  const grid = document.createElement('div'); grid.className = 'grid'; main.appendChild(grid);
+  for (const [src, name, sub, w, hh] of cards) {
+    const el = document.createElement('a'); el.className = 'card'; el.href = src; el.target = '_blank';
+    if (src.endsWith('.png')) {
+      el.innerHTML = `<img src="${src}" alt="${name}"/><div class="meta"><span class="n">${name}</span><span class="s">${sub}</span></div>`;
+      grid.appendChild(el); continue;
+    }
+    el.innerHTML = `<div class="frame"></div><div class="meta"><span class="n">${name}</span><span class="s">${sub}</span></div>`;
+    grid.appendChild(el);
+    const frame = el.querySelector('.frame');
+    const fit = () => {
+      const cw = frame.clientWidth, scale = cw / w;
+      frame.style.height = (hh * scale) + 'px';
+      let f = frame.querySelector('iframe');
+      if (!f) { f = document.createElement('iframe'); f.loading = 'lazy'; f.src = src; f.setAttribute('scrolling','no'); f.tabIndex = -1; frame.appendChild(f); }
+      f.style.width = w + 'px'; f.style.height = hh + 'px'; f.style.transform = `scale(${scale})`;
+    };
+    requestAnimationFrame(fit);
+    new ResizeObserver(fit).observe(frame);
+  }
+}
+</script>
+</body></html>

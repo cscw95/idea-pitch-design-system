@@ -1,0 +1,30 @@
+/* Idea Pitch — Typography
+   기본 서체: 나눔스퀘어 (https://hangeul.naver.com/fonts/search?f=nanum)
+   웹은 CDN 웹폰트, PPT는 로컬 설치본(NanumSquareOTF_ac)을 사용한다.
+   웨이트 토큰: r=400 / b=700 / eb=800 (Light 300은 보조용) */
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/nanumsquare.css');
+
+:root {
+  --font-sans:  'NanumSquare', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  --font-slide: var(--font-sans);   /* 슬라이드도 동일 — 나눔스퀘어 단일 서체 체계 */
+  --font-mono:  'SF Mono', 'Consolas', monospace;
+
+  /* weight tokens */
+  --w-l:  300;
+  --w-r:  400;
+  --w-b:  700;
+  --w-eb: 800;
+
+  /* type scale — 1280×720 슬라이드 기준(px). PPT pt 환산: px ≈ pt × 1.333 */
+  --fs-headline:   35px;   /* 26pt — Governing Headline (eb) */
+  --fs-header:     29px;   /* 22pt — 헤더 덱 이름 (eb) */
+  --fs-section:    27px;   /* 20pt — 헤더 섹션명 (eb) */
+  --fs-takeaway:   21px;   /* 16pt — Takeaway 바 (eb) */
+  --fs-card-head:  20px;   /* 15pt — 카드 서브헤드 (b) */
+  --fs-pill:       19px;   /* 14pt — 섹션 필 (eb) */
+  --fs-chip:       16px;   /* 12pt — 라벨 칩 (eb) */
+  --fs-body:       16px;   /* 12pt — 본문 (r) */
+  --fs-row-title:  17px;   /* 12.5pt — 칩 행 제목 (b) */
+  --fs-sub:        14px;   /* 10.5pt — 보조 설명 (r, muted) */
+  --fs-caption:    13px;   /* 10pt  — 캡션 */
+}

@@ -1,0 +1,4 @@
+/* Idea Pitch Design System — 이 파일 하나만 링크하면 전체 토큰이 로드된다 */
+@import url('tokens/colors.css');
+@import url('tokens/typography.css');
+@import url('tokens/spacing.css');

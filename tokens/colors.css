@@ -1,0 +1,43 @@
+/* Idea Pitch — Color System
+   NAVY(#1F3864) 1색 지배의 라이트 퍼스트 컨설팅 덱 팔레트.
+   정보의 '시제'를 색·선 스타일로 구분한다 (과거 STEEL / 계획 NAVY / 미확정 점선). */
+:root {
+  /* ---- Brand core ---- */
+  --navy: #1f3864;        /* 지배색 — 섹션 필, 칩, 결론 바, 계획 개체 */
+  --blue: #1273c4;        /* 발표자 배지, 포인트 액션 */
+
+  /* ---- Navy ramp ---- */
+  --navy-50:  #eef2f8;
+  --navy-100: #dce7f2;    /* = --sky */
+  --navy-200: #b9cde4;
+  --navy-300: #8aa8cb;
+  --navy-400: #5d81ab;
+  --navy-500: #3a5c88;
+  --navy-600: #2b4972;
+  --navy-700: #1f3864;    /* base */
+  --navy-800: #172a4c;
+  --navy-900: #101d35;
+
+  /* ---- Supporting ---- */
+  --sky:   #dce7f2;       /* 강조 밴드, 중간 결론 배경 */
+  --steel: #8c96a0;       /* 현황·레거시 개체 (과거 시제) */
+  --red:   #c00000;       /* '지금' 시점 마커 — 슬라이드당 1개 */
+
+  /* ---- Surfaces & text ---- */
+  --bg-app:        #ffffff;
+  --surface-card:  #ffffff;
+  --surface-tint:  #f5f7fa;
+  --border-subtle: #c9cdd3;   /* 카드 테두리, 구분선 */
+  --ink:           #1a1a1a;   /* 본문/헤드라인 */
+  --text-primary:  var(--ink);
+  --text-secondary:#4a4a4a;
+  --text-muted:    #7f7f7f;   /* 보조 설명, → 파생 문장 */
+  --text-link:     var(--blue);
+  --text-link-hover: var(--navy);
+  --text-invert:   #ffffff;
+
+  /* ---- 정보 시제(tense) 토큰 ---- */
+  --tense-past:   var(--steel);            /* 채움 — 현황/레거시 */
+  --tense-plan:   var(--navy);             /* 채움 — 현재 결정/계획 */
+  --tense-future: 1.5px dashed var(--navy);/* 테두리 — 미확정/외부 수요 */
+}

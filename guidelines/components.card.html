@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="700x430" name="핵심 컴포넌트" subtitle="Pill Card · Chip Row · Band · Timeline · Entity · Track" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><link rel="stylesheet" href="../styles.css"/>
+<style>
+body{margin:0;background:var(--surface-tint);font-family:var(--font-sans);color:var(--ink);padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:26px 20px}
+.demo{position:relative}
+.cap{font-size:11px;color:var(--text-muted);margin-top:8px}
+.cardx{position:relative;background:#fff;border:1.3px solid var(--border-subtle);border-radius:10px;height:84px;margin-top:20px}
+.pillx{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);background:var(--navy);color:#fff;border-radius:999px;padding:8px 24px;font-size:15px;font-weight:800;white-space:nowrap}
+.rowx{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+.chipx{background:var(--navy);color:#fff;font-size:13px;font-weight:800;width:100px;padding:9px 0;text-align:center;flex:none}
+.bandx{background:var(--sky);color:var(--navy);font-weight:800;font-size:13px;padding:10px 0;text-align:center;margin-top:12px}
+.tw{background:var(--navy);color:#fff;font-weight:800;font-size:13px;padding:10px 0;text-align:center;border-radius:8px;margin-top:12px}
+.tl{position:relative;height:56px;margin-top:22px}
+.tl .ln{position:absolute;left:8px;right:8px;top:8px;height:2px;background:var(--border-subtle)}
+.dot{position:absolute;top:0;width:15px;height:15px;border-radius:50%}
+.dl{position:absolute;top:20px;width:80px;transform:translateX(-40%);text-align:center;font-size:12px;font-weight:800}
+.ent{display:flex;gap:10px;margin-top:14px}
+.ent>div{flex:1;padding:12px 0;text-align:center;font-size:12.5px;font-weight:800}
+.trk{display:flex;gap:8px;margin-top:14px;align-items:center}
+.trk>div{height:34px;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800}
+</style></head><body>
+<div class="demo"><div class="cardx"><span class="pillx">Section Pill Card</span></div><div class="cap">.card + .pill — 필이 카드 상단 테두리에 걸침</div></div>
+<div class="demo"><div class="rowx"><div class="chipx">라벨 칩</div><div><div style="font-size:14px;font-weight:700">칩 행 제목 — Bold</div><div style="font-size:12px;color:var(--text-muted);margin-top:3px">→ 보조 설명은 muted 처리</div></div></div>
+  <div class="bandx">Emphasis Band — 카드 내 중간 결론</div><div class="cap">.row / .band</div></div>
+<div class="demo"><div class="tl"><div class="ln"></div>
+  <div class="dot" style="left:8px;background:var(--navy)"></div><div class="dl" style="left:8px">'23.6</div>
+  <div class="dot" style="left:45%;background:var(--sky);border:2px solid var(--navy);box-sizing:border-box"></div><div class="dl" style="left:45%;color:var(--red)">현재</div>
+  <div class="dot" style="right:8px;background:var(--sky);border:2px solid var(--navy);box-sizing:border-box"></div><div class="dl" style="right:-24px;transform:none">'31~</div>
+</div><div class="cap">.tl-dot / .tl-label — '현재'만 RED</div></div>
+<div class="demo"><div class="ent">
+  <div style="background:var(--tense-past);color:#fff">현황</div>
+  <div style="background:var(--tense-plan);color:#fff">계획</div>
+  <div style="border:var(--tense-future);color:var(--navy)">미확정</div></div>
+  <div class="cap">.entity — 시제 3종</div>
+  <div class="tw">Takeaway Bar — 슬라이드당 1개</div><div class="cap">.takeaway</div></div>
+<div class="demo" style="grid-column:1/3"><div class="trk">
+  <div style="background:var(--navy);color:#fff;width:80px">투자</div>
+  <div style="border:var(--tense-future);color:var(--navy);width:180px">Wait &amp; See 유지</div>
+  <div style="background:var(--steel);color:#fff;width:170px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)">단계적 투자</div>
+  <div style="background:var(--navy);color:#fff;width:230px;clip-path:polygon(0 0,calc(100% - 14px) 0,100% 50%,calc(100% - 14px) 100%,0 100%)">전사 협력 — 확보 가속</div>
+</div><div class="cap">.track — Two-Track 로드맵 화살표</div></div>
+</body></html>
