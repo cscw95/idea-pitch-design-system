@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Idea Pitch Deck" description="경영진 보고·아이디어 피칭용 4-Zone 컨설팅 덱 스타터 (진단형 · 제언형 · 빈 템플릿)" -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1280" height="720" hint-size="100%,100%">
+
+<section data-label="① 상황 인식" style="position:relative;width:1280px;height:720px;background:var(--bg-app);color:var(--ink);font-family:var(--font-slide);overflow:hidden">
+  <div style="position:absolute;left:43px;top:20px;display:flex;align-items:baseline;gap:16px"><span style="font-size:var(--fs-header);font-weight:800">Idea Pitch</span><span style="font-size:var(--fs-section);color:var(--text-muted)">|</span><span style="font-size:var(--fs-section);font-weight:800">① 상황 인식</span></div>
+  <div style="position:absolute;left:43px;right:43px;top:76px;height:2px;background:var(--ink)"></div>
+  <div style="position:absolute;left:43px;right:43px;top:88px;height:58px;display:flex;align-items:center;justify-content:center;font-size:var(--fs-headline);font-weight:800;text-align:center">핵심 판단 한 줄 — 현재 스탠스와 당사 구조의 특수성 제시</div>
+
+  <div style="position:absolute;left:43px;top:187px;width:576px;height:446px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:331px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">당사 방향성 (출처)</div>
+  <div style="position:absolute;left:43px;top:217px;width:576px;text-align:center;font-size:var(--fs-card-head);font-weight:700">카드 서브헤드 — 현황 요약 한 줄</div>
+  <div style="position:absolute;left:77px;top:262px;width:508px;height:1px;background:var(--border-subtle)"></div>
+  <div style="position:absolute;left:81px;top:292px;width:500px;display:flex;gap:17px;align-items:flex-start"><div style="width:149px;min-height:50px;flex:none;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">주제 영역</div><div><div style="font-size:var(--fs-row-title);font-weight:700;line-height:1.25">다양한 항목이 제안되고 있으나, 아직 초기 단계</div><div style="font-size:var(--fs-sub);color:var(--text-muted);margin-top:4px">→ 관련 사례 A · 사례 B · 사례 C 나열</div></div></div>
+  <div style="position:absolute;left:81px;top:383px;width:500px;display:flex;gap:17px;align-items:flex-start"><div style="width:149px;min-height:50px;flex:none;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">차세대 BM</div><div><div style="font-size:var(--fs-row-title);font-weight:700;line-height:1.25">초기 아이디어 — 단, 현실적 제약 有</div><div style="font-size:var(--fs-sub);color:var(--text-muted);margin-top:4px">→ 제약 수치 1 · 제약 수치 2 · 미정 항목</div></div></div>
+  <div style="position:absolute;left:81px;top:474px;width:500px;display:flex;gap:17px;align-items:flex-start"><div style="width:149px;min-height:50px;flex:none;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">주요 Stance</div><div><div style="font-size:var(--fs-row-title);font-weight:700;line-height:1.25">이해관계자별 상반된 입장 요약</div><div style="font-size:var(--fs-sub);color:var(--text-muted);margin-top:4px">→ 외부 권고 근거 ('34년~ 본격 투자)</div></div></div>
+  <div style="position:absolute;left:81px;top:566px;width:500px;height:var(--band-h);background:var(--sky);color:var(--navy);font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center">▶&nbsp; 중간 결론 — 방향성은 도출, 단 전제 조건은 미확정</div>
+
+  <div style="position:absolute;left:648px;top:187px;width:588px;height:206px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:942px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">생태계 동향 &amp; Timeline</div>
+  <div style="position:absolute;left:648px;top:214px;width:588px;text-align:center;font-size:17px;font-weight:700">기술 개발·표준화 진행 중 — 요구사항 반영의 창은 한시적</div>
+  <div style="position:absolute;left:711px;top:308px;width:462px;height:2px;background:var(--border-subtle)"></div>
+  <div style="position:absolute;left:711px;top:308px;width:17px;height:17px;border-radius:50%;transform:translate(-50%,-50%);background:var(--navy)"></div>
+  <div style="position:absolute;left:865px;top:308px;width:17px;height:17px;border-radius:50%;transform:translate(-50%,-50%);background:var(--sky);border:2px solid var(--navy);box-sizing:border-box"></div>
+  <div style="position:absolute;left:1019px;top:308px;width:17px;height:17px;border-radius:50%;transform:translate(-50%,-50%);background:var(--navy)"></div>
+  <div style="position:absolute;left:1173px;top:308px;width:17px;height:17px;border-radius:50%;transform:translate(-50%,-50%);background:var(--sky);border:2px solid var(--navy);box-sizing:border-box"></div>
+  <div style="position:absolute;left:711px;top:325px;width:130px;transform:translateX(-50%);text-align:center"><div style="font-size:15px;font-weight:800">'23.6</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">비전 수립</div></div>
+  <div style="position:absolute;left:865px;top:325px;width:130px;transform:translateX(-50%);text-align:center"><div style="font-size:15px;font-weight:800;color:var(--red)">현재</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">개발 경쟁</div></div>
+  <div style="position:absolute;left:1019px;top:325px;width:130px;transform:translateX(-50%);text-align:center"><div style="font-size:15px;font-weight:800">'29.3</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">표준 배포</div></div>
+  <div style="position:absolute;left:1173px;top:325px;width:130px;transform:translateX(-50%);text-align:center"><div style="font-size:15px;font-weight:800">'31~</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">상용화</div></div>
+
+  <div style="position:absolute;left:648px;top:427px;width:588px;height:206px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:942px;top:427px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">당사 구조의 특수성</div>
+  <div style="position:absolute;left:648px;top:455px;width:588px;text-align:center;font-size:17px;font-weight:700">글로벌 다수와 다른 '집중형 구조'</div>
+  <div style="position:absolute;left:686px;top:518px;width:245px;height:82px;background:var(--steel);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:15px;font-weight:800">Global 다수<span style="font-size:13px;font-weight:400">분산형 구조</span></div>
+  <div style="position:absolute;left:964px;top:518px;width:245px;height:82px;background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:15px;font-weight:800">당사<span style="font-size:13px;font-weight:400">집중형 구조</span></div>
+
+  <div style="position:absolute;left:43px;right:43px;top:651px;height:53px;background:var(--navy);border-radius:var(--radius-bar);color:#fff;font-size:var(--fs-takeaway);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">행동 함의 결론 — 당사 특수성을 고려한 기술 개발 및 생태계 조성이 중요함</div>
+</section>
+
+<section data-label="② 방향성 제언" style="position:relative;width:1280px;height:720px;background:var(--bg-app);color:var(--ink);font-family:var(--font-slide);overflow:hidden">
+  <div style="position:absolute;left:43px;top:20px;display:flex;align-items:baseline;gap:16px"><span style="font-size:var(--fs-header);font-weight:800">Idea Pitch</span><span style="font-size:var(--fs-section);color:var(--text-muted)">|</span><span style="font-size:var(--fs-section);font-weight:800">② 방향성 제언</span></div>
+  <div style="position:absolute;left:43px;right:43px;top:76px;height:2px;background:var(--ink)"></div>
+  <div style="position:absolute;left:43px;right:43px;top:88px;height:58px;display:flex;align-items:center;justify-content:center;font-size:var(--fs-headline);font-weight:800;text-align:center">핵심 판단 한 줄 — 투자의 시계와 설계의 시계는 다름</div>
+
+  <div style="position:absolute;left:43px;top:187px;width:629px;height:446px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:357px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">확장성 논거</div>
+  <div style="position:absolute;left:43px;top:217px;width:629px;text-align:center;font-size:var(--fs-card-head);font-weight:700">당사 구조가 유리한 기반임을 보여주는 전환 다이어그램</div>
+  <div style="position:absolute;left:77px;top:262px;width:561px;height:1px;background:var(--border-subtle)"></div>
+  <div style="position:absolute;left:81px;top:298px;width:168px;height:168px;background:var(--steel);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:15px;font-weight:800">현재 자산<span style="font-size:13px;font-weight:400">(레거시)</span></div>
+  <div style="position:absolute;left:262px;top:362px;width:74px;height:44px;background:var(--navy);clip-path:polygon(0 30%,62% 30%,62% 0,100% 50%,62% 100%,62% 70%,0 70%)"></div>
+  <div style="position:absolute;left:258px;top:412px;font-size:var(--fs-caption);color:var(--text-muted)">전환 기술 적용</div>
+  <div style="position:absolute;left:350px;top:298px;width:192px;height:46px;background:var(--bg-app);border:1.5px dashed var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;box-sizing:border-box">+ 신규 수요분</div>
+  <div style="position:absolute;left:350px;top:358px;width:192px;height:46px;background:var(--bg-app);border:1.5px dashed var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;box-sizing:border-box">+ 증가분</div>
+  <div style="position:absolute;left:350px;top:418px;width:192px;height:46px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800">전환 개체 (계획)</div>
+  <div style="position:absolute;left:576px;top:330px;width:46px;height:88px;background:var(--steel);clip-path:polygon(30% 100%,30% 38%,0 38%,50% 0,100% 38%,70% 38%,70% 100%)"></div>
+  <div style="position:absolute;left:552px;top:428px;width:110px;text-align:center;font-size:var(--fs-caption);color:var(--text-muted)">수요 맞춤 증설</div>
+  <div style="position:absolute;left:81px;top:502px;width:557px;height:var(--band-h);background:var(--sky);color:var(--navy);font-size:17px;font-weight:800;display:flex;align-items:center;justify-content:center">자원 공유 기술과 결합 시, 비용 효율적·유연한 구축 가능</div>
+  <div style="position:absolute;left:81px;top:566px;width:125px;height:40px;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center">하방 방어</div>
+  <div style="position:absolute;left:218px;top:577px;font-size:var(--fs-caption);color:var(--ink)">수요 없어도 TCO 절감</div>
+  <div style="position:absolute;left:384px;top:566px;width:125px;height:40px;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center">상방 확장</div>
+  <div style="position:absolute;left:521px;top:577px;font-size:var(--fs-caption);color:var(--ink)">수요 시 유연 증설</div>
+
+  <div style="position:absolute;left:700px;top:187px;width:536px;height:225px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:968px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">한계 요인</div>
+  <div style="position:absolute;left:730px;top:224px;width:476px;display:flex;gap:17px;align-items:flex-start"><div style="width:149px;height:60px;flex:none;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">기울어진<br/>운동장</div><div><div style="font-size:var(--fs-row-title);font-weight:700;line-height:1.25">외부 수요 중심 구조로 대기 시 선택지 소멸</div><div style="font-size:var(--fs-sub);color:var(--text-muted);margin-top:4px">→ 수동적 Wait &amp; see 시 선택지 소멸</div></div></div>
+  <div style="position:absolute;left:730px;top:316px;width:476px;display:flex;gap:17px;align-items:flex-start"><div style="width:149px;height:60px;flex:none;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">절반의<br/>설계도</div><div><div style="font-size:var(--fs-row-title);font-weight:700;line-height:1.25">Cross-domain 고려한 구조 준비 필요</div><div style="font-size:var(--fs-sub);color:var(--text-muted);margin-top:4px">→ 단독 정의 불가 · 전사 공동 설계</div></div></div>
+
+  <div style="position:absolute;left:700px;top:446px;width:536px;height:187px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:968px;top:446px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">방향성 제언</div>
+  <div style="position:absolute;left:700px;top:472px;width:536px;text-align:center;font-size:17px;font-weight:700">Two-Track — 투자는 신중히, 확보는 가속</div>
+  <div style="position:absolute;left:854px;top:512px;color:var(--red);font-weight:800;font-size:var(--fs-caption)">지금</div>
+  <div style="position:absolute;left:730px;top:538px;width:110px;height:40px;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center">투자</div>
+  <div style="position:absolute;left:854px;top:538px;width:182px;height:40px;background:var(--bg-app);border:1.5px dashed var(--navy);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;box-sizing:border-box">Wait &amp; See</div>
+  <div style="position:absolute;left:1040px;top:538px;width:168px;height:40px;background:var(--steel);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)">단계적 투자</div>
+  <div style="position:absolute;left:730px;top:586px;width:110px;height:40px;background:var(--navy);color:#fff;font-size:var(--fs-chip);font-weight:800;display:flex;align-items:center;justify-content:center">설계</div>
+  <div style="position:absolute;left:854px;top:586px;width:354px;height:40px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;clip-path:polygon(0 0,calc(100% - 16px) 0,100% 50%,calc(100% - 16px) 100%,0 100%)">전사 협력 — 확보 가속</div>
+
+  <div style="position:absolute;left:43px;right:43px;top:651px;height:53px;background:var(--navy);border-radius:var(--radius-bar);color:#fff;font-size:var(--fs-takeaway);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">행동 함의 결론 — 투자는 신중히 하되, 규합은 전사 협력으로 적극 확장 필요</div>
+</section>
+
+<section data-label="빈 템플릿" style="position:relative;width:1280px;height:720px;background:var(--bg-app);color:var(--ink);font-family:var(--font-slide);overflow:hidden">
+  <div style="position:absolute;left:43px;top:20px;display:flex;align-items:baseline;gap:16px"><span style="font-size:var(--fs-header);font-weight:800">Idea Pitch</span><span style="font-size:var(--fs-section);color:var(--text-muted)">|</span><span style="font-size:var(--fs-section);font-weight:800">① [섹션명]</span></div>
+  <div style="position:absolute;left:43px;right:43px;top:76px;height:2px;background:var(--ink)"></div>
+  <div style="position:absolute;left:43px;right:43px;top:88px;height:58px;display:flex;align-items:center;justify-content:center;font-size:var(--fs-headline);font-weight:800;text-align:center">[거버닝 메시지 — 이 슬라이드의 판단 한 줄]</div>
+  <div style="position:absolute;left:43px;top:187px;width:576px;height:446px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:331px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">[좌측 섹션 라벨]</div>
+  <div style="position:absolute;left:43px;top:217px;width:576px;text-align:center;font-size:var(--fs-card-head);font-weight:700">[카드 서브헤드]</div>
+  <div style="position:absolute;left:77px;top:262px;width:508px;height:1px;background:var(--border-subtle)"></div>
+  <div style="position:absolute;left:648px;top:187px;width:588px;height:206px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:942px;top:187px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">[우상단 섹션 라벨]</div>
+  <div style="position:absolute;left:648px;top:427px;width:588px;height:206px;background:var(--surface-card);border:1.3px solid var(--border-subtle);border-radius:var(--radius-card)"></div>
+  <div style="position:absolute;left:942px;top:427px;transform:translate(-50%,-50%);height:var(--pill-h);padding:0 30px;background:var(--navy);color:#fff;border-radius:999px;display:flex;align-items:center;font-size:var(--fs-pill);font-weight:800;white-space:nowrap">[우하단 섹션 라벨]</div>
+  <div style="position:absolute;left:43px;right:43px;top:651px;height:53px;background:var(--navy);border-radius:var(--radius-bar);color:#fff;font-size:var(--fs-takeaway);font-weight:800;display:flex;align-items:center;justify-content:center;text-align:center">[행동 함의 결론 — Headline과 다른 문장으로]</div>
+</section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

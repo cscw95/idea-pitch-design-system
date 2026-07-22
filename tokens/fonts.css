@@ -1,0 +1,41 @@
+/* Idea Pitch — Fonts
+   기본 서체 나눔스퀘어(NanumSquare)를 명시적 @font-face로 선언한다.
+   원본 구성의 CDN(moonspam/NanumSquare)과 동일한 폰트 바이너리를 절대 URL로 가리키므로
+   서체 대체가 아니라 동일 서체를 프로젝트에 등록하는 것이다.
+   오프라인/PPT 산출 시에는 네이버 나눔글꼴의 NanumSquareOTF_ac 4웨이트를 로컬 설치한다. */
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareL.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareL.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareL.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareR.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareR.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareR.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareB.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareB.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareB.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareEB.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareEB.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@master/NanumSquareEB.ttf') format('truetype');
+}
