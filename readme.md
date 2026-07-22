@@ -7,7 +7,11 @@
 > 원 브리프: *"첨부 이미지(Idea Pitch 상황 인식 / 방향성 제언)와 같은 구조의 PPT 템플릿 design system"*
 > — HTML 슬라이드와 **python-pptx 생성기**의 두 가지 산출 경로를 모두 제공한다.
 
-**Preview:** GitHub Pages에서 `index.html` 갤러리로 전체 시스템을 열람할 수 있다.
+**Links**
+- Design Preview (갤러리): https://cscw95.github.io/idea-pitch-design-system/
+- 발표용 덱 템플릿 (라이브): https://cscw95.github.io/idea-pitch-design-system/templates/idea-pitch-deck/IdeaPitchDeck.dc.html
+- Source Repo: https://github.com/cscw95/idea-pitch-design-system
+- Claude Design 프로젝트: "Idea Pitch Design System" (`dec7a5cf-c8a1-4c09-adbe-eac75689e282`)
 
 ---
 
@@ -60,6 +64,10 @@
 │   ├── diagnosis.slide.html   진단형(상황 인식) 패턴
 │   ├── proposal.slide.html    제언형(방향성 제언) 패턴
 │   └── blank.slide.html       빈 스타터
+├── templates/idea-pitch-deck/  발표용 덱 템플릿 (Claude Design dc-runtime)
+│   ├── IdeaPitchDeck.dc.html  3장 스타터 — 키보드 내비게이션·썸네일·발표 모드
+│   └── deck-stage.js / support.js / ds-base.js   덱 런타임
+├── _ds_bundle.js         React 컴포넌트 번들 (SlideFrame·SectionCard·ChipRow 등 12종)
 ├── ppt/                  PowerPoint 경로
 │   ├── generate_template.py   python-pptx 생성기 (컴포넌트 함수 API)
 │   ├── idea_pitch_template.pptx  8장 템플릿 (토큰 가이드 + 예시 + 빈 템플릿)
@@ -70,6 +78,8 @@
 ## 사용법
 
 **HTML 슬라이드** — `slides/blank.slide.html`을 복제해 내용을 교체한다. `styles.css` + `slides/slide.css` 두 파일만 링크하면 컴포넌트 클래스(`.card` `.pill` `.chip` `.row` `.band` `.takeaway` `.entity` `.track` 등)를 그대로 쓸 수 있다.
+
+**발표용 덱** — `templates/idea-pitch-deck/`와 루트 `styles.css`·`tokens/`·`_ds_bundle.js`를 함께 복사한 뒤 `<section data-label="…">`을 추가·교체한다. 상대경로 로드가 있어 HTTP 서버로 열어야 한다 (`python3 -m http.server`).
 
 **PPT** — 나눔스퀘어 OTF(_ac 계열) 설치 후:
 
