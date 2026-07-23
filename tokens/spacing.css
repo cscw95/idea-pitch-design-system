@@ -1,5 +1,6 @@
 /* Idea Pitch — Spacing · Layout Zones · Radii
-   16:9 (1280×720px = 13.33×7.5in) 기준. PPT in 환산: px ≈ in × 96 */
+   16:9 (1280×720px = 13.33×7.5in) 기준. PPT in 환산: px ≈ in × 96
+   v2 변경: 하단에 footer 존(로고 + 페이지 번호)을 추가하고 Takeaway 바를 위로 당겨 자리를 확보. */
 :root {
   /* ---- margins & grid ---- */
   --slide-w: 1280px;
@@ -10,19 +11,22 @@
   --col-left-w: 576px;       /* 6.00in — 좌측 메인 카드 */
   --col-right-w: 588px;      /* 6.13in — 우측 서브 스택 */
 
-  /* ---- 4-Zone 수직 구조 ---- */
+  /* ---- 수직 구조 (Header → Headline → Body → Takeaway → Footer) ---- */
   --zone-header-top: 22px;
   --zone-rule-y: 94px;       /* 헤더 하단 룰 */
   --zone-headline-y: 106px;
   --zone-body-y: 187px;      /* 1.95in */
-  --zone-body-h: 446px;      /* 4.65in */
-  --zone-takeaway-y: 651px;  /* 6.78in */
-  --zone-takeaway-h: 53px;
+  --zone-body-h: 434px;      /* footer 확보 위해 축소 (구 446) */
+  --zone-takeaway-y: 638px;  /* 위로 당김 (구 651) */
+  --zone-takeaway-h: 48px;
+  --zone-footer-y: 694px;    /* footer 스트립 상단 */
+  --zone-footer-h: 20px;     /* 로고 높이 기준 */
 
   /* ---- component dims ---- */
   --pill-h: 42px;
   --chip-h: 50px;
   --band-h: 43px;
+  --footer-logo-h: 20px;     /* footer SKT 로고 높이 */
 
   /* ---- radii ---- */
   --radius-card: 10px;       /* 섹션 카드 */

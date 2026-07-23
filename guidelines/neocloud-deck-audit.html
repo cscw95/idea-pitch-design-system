@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><title>NeoCloud BMaaS 덱 진단 리포트</title>
+<link rel="stylesheet" href="../styles.css"/>
+<style>
+html,body{margin:0;background:var(--surface-tint);color:var(--ink);font-family:var(--font-sans)}
+a{color:var(--text-link)}a:hover{color:var(--text-link-hover)}
+.wrap{max-width:1060px;margin:0 auto;padding:48px 32px 80px;word-break:keep-all}
+h1{font-size:32px;font-weight:800;margin:0}
+.lede{color:var(--text-secondary);margin:12px 0 0;font-size:15px;line-height:1.6}
+h2{font-size:21px;font-weight:800;margin:56px 0 6px;display:flex;align-items:center;gap:10px}
+h2 .no{background:var(--navy);color:#fff;border-radius:999px;width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none}
+.sub{color:var(--text-muted);font-size:14px;margin:0 0 18px;line-height:1.5}
+table{border-collapse:collapse;width:100%;background:#fff;font-size:13.5px}
+th,td{border:1px solid var(--border-subtle);padding:8px 12px;text-align:left}
+th{background:var(--sky);color:var(--navy);font-weight:800}
+td.ok{color:var(--navy);font-weight:700}td.bad{color:var(--red);font-weight:700}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
+.panel{background:#fff;border:1px solid var(--border-subtle);border-radius:10px;overflow:hidden}
+.panel .tag{padding:7px 14px;font-size:12px;font-weight:800;letter-spacing:1px}
+.panel.before .tag{background:#f6e3e3;color:var(--red)}
+.panel.after .tag{background:var(--sky);color:var(--navy)}
+.panel .demo{padding:18px 20px}
+.chg{background:#fff;border:1px solid var(--border-subtle);border-radius:10px;padding:16px 20px;margin-top:14px;font-size:13.5px}
+.chg code{font-family:var(--font-mono);font-size:12px;background:var(--surface-tint);padding:1px 6px;border-radius:4px}
+.chg ul{margin:8px 0 0;padding-left:18px;line-height:1.8}
+.kpibox{border:1.5px solid var(--border-subtle);padding:12px;width:240px;font-size:12.7px;line-height:1.35}
+.kpibox b{display:block;font-size:14px;margin-bottom:4px}
+.badge{display:inline-block;background:var(--navy);color:#fff;font-weight:800;font-size:12px;padding:3px 10px;border-radius:999px;margin-right:6px}
+</style></head><body>
+<div class="wrap">
+  <div class="badge">DECK AUDIT</div><div class="badge" style="background:var(--steel)">v2.1</div>
+  <h1 style="margin-top:14px">NeoCloud BMaaS 덱 (28p) — 비율·폰트 진단과 개선 적용</h1>
+  <p class="lede">첨부 PDF(<code style="font-family:var(--font-mono);font-size:13px">uploads/NeoCloudBmaasDeck.pdf</code>)의 전 페이지 텍스트를 실측했다.
+  페이지 캔버스는 960×540 = 스펙(1280×720)의 0.75배 — 아래 수치는 ×1.333 환산한 디자인 px 기준이다.
+  <b>토큰 준수율은 높다</b> (Headline·Header·Takeaway·소제목·Footer 모두 스펙 일치). 발견된 문제는 4가지이며, 각각 시스템에 반영했다.</p>
+
+  <h2><span class="no">0</span>실측 요약 — 토큰 대비</h2>
+  <p class="sub">p1(표지) · p2(Exec Summary) · p4(진단형) · p7(제언형) 샘플 실측.</p>
+  <table>
+    <tr><th>요소</th><th>실측 (환산 px)</th><th>토큰</th><th>판정</th></tr>
+    <tr><td>표지 제목 / 부제 / eyebrow / meta</td><td>58 / 22 / 20 / 13</td><td>60 / 22 / 20 / 13</td><td class="ok">✓ 준수 (제목 −2px 허용오차)</td></tr>
+    <tr><td>Governing Headline</td><td>35</td><td>--fs-headline 35</td><td class="ok">✓ 준수</td></tr>
+    <tr><td>헤더 덱이름 / 섹션명 / 소제목</td><td>29 / 27 / 16</td><td>29 / 27 / 16</td><td class="ok">✓ 준수</td></tr>
+    <tr><td>Takeaway / 카드헤드 / 필</td><td>21 / 20 / 19</td><td>21 / 20 / 19</td><td class="ok">✓ 준수</td></tr>
+    <tr><td>칩 라벨</td><td><b>15</b></td><td>--fs-chip 16</td><td class="bad">✗ 1px 축소 적용</td></tr>
+    <tr><td>본문 목록 (p2 개방/유지 목록)</td><td><b>12.5</b> ×40개</td><td>본문 최소 = --fs-sub 14</td><td class="bad">✗ 최소 크기 미달</td></tr>
+    <tr><td>로드맵 단계 라벨 (p2)</td><td><b>12</b> ×20개</td><td>12 = footer 전용</td><td class="bad">✗ chrome 크기를 본문에 사용</td></tr>
+    <tr><td>보조 설명 밀도 (p7)</td><td>14px 항목 <b>90개</b>/장</td><td>카드당 3행 권장</td><td class="bad">✗ 밀도 과다</td></tr>
+  </table>
+
+  <h2><span class="no">1</span>숫자 중간 줄바꿈 — <code>word-break: keep-all</code> 추가</h2>
+  <p class="sub">p2에서 "연 효과 45억원(30MW) · 400<b style="color:var(--red)">억원</b>(300MW)"이 "400억 / 원(300MW)"으로 단어 중간에서 끊긴다.
+  국문은 기본 word-break가 음절 단위라 수치·단위가 분리된다.</p>
+  <div class="pair">
+    <div class="panel before"><div class="tag">BEFORE — PDF 실제 현상</div><div class="demo">
+      <div class="kpibox" style="word-break:break-all"><b>기대효과</b>전면 공개 시 연 효과 45억원(30MW) · 400억원(300MW)</div>
+    </div></div>
+    <div class="panel after"><div class="tag">AFTER — keep-all 적용</div><div class="demo">
+      <div class="kpibox" style="word-break:keep-all;overflow-wrap:break-word"><b>기대효과</b>전면 공개 시 연 효과 <span class="num" style="white-space:nowrap">45억원(30MW)</span> · <span style="white-space:nowrap">400억원(300MW)</span></div>
+    </div></div>
+  </div>
+  <div class="chg"><b>변경된 부분</b><ul>
+    <li><code>slides/slide.css</code> — <code>.slide, .title-slide, .divider-slide { word-break: keep-all; overflow-wrap: break-word }</code></li>
+    <li><code>slides/slide.css</code> — 수치 전용 유틸 <code>.num { white-space: nowrap; font-variant-numeric: tabular-nums }</code> 신설</li>
+    <li><code>SlideFrame</code> · <code>SectionDivider</code> · <code>TitleSlide</code> 컴포넌트에 <code>wordBreak: 'keep-all'</code> 내장</li>
+  </ul></div>
+
+  <h2><span class="no">2</span>본문 최소 크기 하한 — 14px 미만 금지</h2>
+  <p class="sub">p2 개방/유지 목록(12.5px ×40)과 로드맵 라벨(12px ×20)이 chrome 전용 크기(caption 13 / footer 12)로 본문을 조판했다.
+  1280×720 투사 기준 본문 하한은 <b>--fs-sub 14px</b>다.</p>
+  <div class="pair">
+    <div class="panel before"><div class="tag">BEFORE — 12.5px 목록</div><div class="demo" style="font-size:12.5px;line-height:1.35;color:var(--text-secondary)">
+      전원 · 재부팅 · Rescue · OS 재설치<br/>헬스 · GPU 진단 · 토폴로지 · 로그<br/>유지보수 창 · 증설 · RBAC · Terraform
+    </div></div>
+    <div class="panel after"><div class="tag">AFTER — 14px + 행간 1.4</div><div class="demo" style="font-size:14px;line-height:1.4;color:var(--text-secondary)">
+      전원 · 재부팅 · Rescue · OS 재설치<br/>헬스 · GPU 진단 · 토폴로지 · 로그<br/>유지보수 창 · 증설 · RBAC · Terraform
+    </div></div>
+  </div>
+  <div class="chg"><b>변경된 부분</b><ul>
+    <li><code>tokens/typography.css</code> — <code>--fs-sub</code>를 "본문 최소 크기"로, <code>--fs-caption/--fs-footer</code>를 "chrome 전용 — 본문 사용 금지"로 명문화</li>
+    <li><code>readme.md</code> · <code>SKILL.md</code> — Hard rule 추가: "본문 텍스트 14px 미만 금지"</li>
+  </ul></div>
+
+  <h2><span class="no">3</span>칩 라벨 크기 복원 — 15px → 16px</h2>
+  <p class="sub">적용 자료의 칩이 토큰(16px)보다 1px 작게 조판됐다. 칩은 시스템의 시그니처 단위 — 크기 임의 축소 금지.</p>
+  <div class="pair">
+    <div class="panel before"><div class="tag">BEFORE — 15px</div><div class="demo">
+      <span style="display:inline-flex;background:var(--navy);color:#fff;font-size:15px;font-weight:800;padding:9px 12px;min-width:120px;justify-content:center">처리 시간</span>
+    </div></div>
+    <div class="panel after"><div class="tag">AFTER — --fs-chip 16px</div><div class="demo">
+      <span style="display:inline-flex;background:var(--navy);color:#fff;font-size:16px;font-weight:800;padding:9px 12px;min-width:120px;justify-content:center">처리 시간</span>
+    </div></div>
+  </div>
+  <div class="chg"><b>변경된 부분</b><ul>
+    <li>토큰 변경 없음 (스펙이 옳음) — <code>readme.md</code>에 "칩·필 크기는 토큰 고정, 공간 부족 시 라벨을 줄이지 크기를 줄이지 말 것" 규칙 추가</li>
+  </ul></div>
+
+  <h2><span class="no">4</span>밀도 상한 + 행간 상향 — 카드당 3행, lh 1.3/1.4</h2>
+  <p class="sub">p7은 한 장에 14px 보조 텍스트가 90개 — 카드당 ChipRow 4개 이상이 압축 행간(1.25)으로 조판됐다.
+  시스템 권장은 <b>카드당 ChipRow 3개 이하</b>; 넘치면 슬라이드를 분할하고 간지로 리듬을 만든다.</p>
+  <div class="pair">
+    <div class="panel before"><div class="tag">BEFORE — 행간 1.25 · 4행 압축</div><div class="demo" style="display:flex;flex-direction:column;gap:9px">
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">대량 오작업</span><div><div style="font-size:14px;font-weight:700;line-height:1.25">자동화 버그로 대량 리부팅·삭제</div><div style="font-size:12px;color:var(--text-muted);line-height:1.25">→ Blast-radius 상한 · dry-run 필수 · 서킷브레이커</div></div></div>
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">고객 실수</span><div><div style="font-size:14px;font-weight:700;line-height:1.25">오노드 재설치·erase</div><div style="font-size:12px;color:var(--text-muted);line-height:1.25">→ soft-delete + 30분 지연취소창 · 리소스 lock</div></div></div>
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">자격증명 유출</span><div><div style="font-size:14px;font-weight:700;line-height:1.25">키 탈취 후 오남용</div><div style="font-size:12px;color:var(--text-muted);line-height:1.25">→ 단기 토큰 · OIDC · IP allowlist · 자동 폐기</div></div></div>
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">격리 실패</span><div><div style="font-size:14px;font-weight:700;line-height:1.25">DPU 우회·권한 상승</div><div style="font-size:12px;color:var(--text-muted);line-height:1.25">→ BMC 비노출 · 관리망 물리 분리 · 회귀테스트</div></div></div>
+    </div></div>
+    <div class="panel after"><div class="tag">AFTER — 행간 1.3/1.4 · 3행 + 분할</div><div class="demo" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">대량 오작업</span><div><div style="font-size:14px;font-weight:700;line-height:1.3">자동화 버그로 대량 리부팅·삭제</div><div style="font-size:12.5px;color:var(--text-muted);line-height:1.4">→ Blast-radius 상한 · dry-run 필수 · 서킷브레이커</div></div></div>
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">고객 실수</span><div><div style="font-size:14px;font-weight:700;line-height:1.3">오노드 재설치·erase</div><div style="font-size:12.5px;color:var(--text-muted);line-height:1.4">→ soft-delete + 30분 지연취소창 · 리소스 lock</div></div></div>
+      <div style="display:flex;gap:10px"><span style="background:var(--navy);color:#fff;font-size:13px;font-weight:800;padding:5px 8px;flex:none;width:74px;text-align:center">자격증명 유출</span><div><div style="font-size:14px;font-weight:700;line-height:1.3">키 탈취 후 오남용</div><div style="font-size:12.5px;color:var(--text-muted);line-height:1.4">→ 단기 토큰 · OIDC · IP allowlist · 자동 폐기</div></div></div>
+      <div style="font-size:12px;color:var(--text-muted)">… 4번째 행(격리 실패)은 다음 슬라이드로 분할 →</div>
+    </div></div>
+  </div>
+  <div class="chg"><b>변경된 부분</b><ul>
+    <li><code>slides/slide.css</code> · <code>ChipRow</code> — 제목 행간 1.25→<b>1.3</b>, 보조 행간 1.3→<b>1.4</b></li>
+    <li><code>readme.md</code> · <code>SKILL.md</code> — 밀도 규칙: "카드당 ChipRow 3개 이하 · 초과 시 슬라이드 분할"</li>
+  </ul></div>
+
+  <h2><span class="no">✓</span>변경 파일 요약</h2>
+  <div class="chg" style="margin-top:8px"><ul style="margin-top:0">
+    <li><code>slides/slide.css</code> — keep-all + .num 유틸 + 행간 상향</li>
+    <li><code>components/structure/SlideFrame.jsx · TitleSlide.jsx · SectionDivider.jsx</code> — keep-all 내장</li>
+    <li><code>components/blocks/ChipRow.jsx</code> — 행간 상향</li>
+    <li><code>tokens/typography.css</code> — 크기 용도 주석 명문화 (본문 최소 14 / chrome 전용 13·12)</li>
+    <li><code>readme.md · SKILL.md</code> — Hard rules 3종 추가 (최소 크기 · 칩 크기 고정 · 밀도 상한)</li>
+  </ul></div>
+</div>
+</body></html>

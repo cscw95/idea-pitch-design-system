@@ -1,8 +1,8 @@
-/* @ds-bundle: {"format":4,"namespace":"IdeaPitchDesignSystem_dec7a5","components":[{"name":"ChipRow","sourcePath":"components/blocks/ChipRow.jsx"},{"name":"EmphasisBand","sourcePath":"components/blocks/EmphasisBand.jsx"},{"name":"EntityBox","sourcePath":"components/blocks/EntityBox.jsx"},{"name":"FlowArrow","sourcePath":"components/blocks/FlowArrow.jsx"},{"name":"LabelChip","sourcePath":"components/blocks/LabelChip.jsx"},{"name":"SectionCard","sourcePath":"components/blocks/SectionCard.jsx"},{"name":"Timeline","sourcePath":"components/blocks/Timeline.jsx"},{"name":"TrackArrow","sourcePath":"components/blocks/TrackArrow.jsx"},{"name":"GoverningHeadline","sourcePath":"components/structure/GoverningHeadline.jsx"},{"name":"SlideFrame","sourcePath":"components/structure/SlideFrame.jsx"},{"name":"SlideHeader","sourcePath":"components/structure/SlideHeader.jsx"},{"name":"TakeawayBar","sourcePath":"components/structure/TakeawayBar.jsx"}],"sourceHashes":{"components/blocks/ChipRow.jsx":"c94ccf55374e","components/blocks/EmphasisBand.jsx":"944e70b31f9e","components/blocks/EntityBox.jsx":"7912313b356d","components/blocks/FlowArrow.jsx":"716e65eeb9c4","components/blocks/LabelChip.jsx":"55e85bc8a5c4","components/blocks/SectionCard.jsx":"4c480c4e79ab","components/blocks/Timeline.jsx":"c99482aeb4a7","components/blocks/TrackArrow.jsx":"3f4aaa0017af","components/structure/GoverningHeadline.jsx":"be149530e298","components/structure/SlideFrame.jsx":"adb9a4f32ce0","components/structure/SlideHeader.jsx":"73c6c23e1cbb","components/structure/TakeawayBar.jsx":"6b94847fafc8"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"IdeaPitchSKTDesignSystem_14362e","components":[{"name":"ChipRow","sourcePath":"components/blocks/ChipRow.jsx"},{"name":"EmphasisBand","sourcePath":"components/blocks/EmphasisBand.jsx"},{"name":"EntityBox","sourcePath":"components/blocks/EntityBox.jsx"},{"name":"FlowArrow","sourcePath":"components/blocks/FlowArrow.jsx"},{"name":"LabelChip","sourcePath":"components/blocks/LabelChip.jsx"},{"name":"SectionCard","sourcePath":"components/blocks/SectionCard.jsx"},{"name":"Timeline","sourcePath":"components/blocks/Timeline.jsx"},{"name":"TrackArrow","sourcePath":"components/blocks/TrackArrow.jsx"},{"name":"GoverningHeadline","sourcePath":"components/structure/GoverningHeadline.jsx"},{"name":"SectionDivider","sourcePath":"components/structure/SectionDivider.jsx"},{"name":"SlideFooter","sourcePath":"components/structure/SlideFooter.jsx"},{"name":"SlideFrame","sourcePath":"components/structure/SlideFrame.jsx"},{"name":"SlideHeader","sourcePath":"components/structure/SlideHeader.jsx"},{"name":"TakeawayBar","sourcePath":"components/structure/TakeawayBar.jsx"},{"name":"TitleSlide","sourcePath":"components/structure/TitleSlide.jsx"}],"sourceHashes":{"components/blocks/ChipRow.jsx":"eaf118fec2bf","components/blocks/EmphasisBand.jsx":"92dc8892bdf3","components/blocks/EntityBox.jsx":"7912313b356d","components/blocks/FlowArrow.jsx":"93a91f3b01f7","components/blocks/LabelChip.jsx":"55e85bc8a5c4","components/blocks/SectionCard.jsx":"4c480c4e79ab","components/blocks/Timeline.jsx":"f9fda1c2c881","components/blocks/TrackArrow.jsx":"8d4e27083a46","components/structure/GoverningHeadline.jsx":"a3ca925afaac","components/structure/SectionDivider.jsx":"6a7c4e931d19","components/structure/SlideFooter.jsx":"4ec533f354e8","components/structure/SlideFrame.jsx":"c14f8e7cbfef","components/structure/SlideHeader.jsx":"662505628c33","components/structure/TakeawayBar.jsx":"895817283792","components/structure/TitleSlide.jsx":"7d6b33696844"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
-const __ds_ns = (window.IdeaPitchDesignSystem_dec7a5 = window.IdeaPitchDesignSystem_dec7a5 || {});
+const __ds_ns = (window.IdeaPitchSKTDesignSystem_14362e = window.IdeaPitchSKTDesignSystem_14362e || {});
 
 const __ds_scope = {};
 
@@ -11,7 +11,7 @@ const __ds_scope = {};
 // components/blocks/EmphasisBand.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** A sky-blue band carrying an in-card intermediate conclusion. */
+/** A sky-blue band carrying an in-card intermediate conclusion (중간 결론). */
 function EmphasisBand({
   children,
   style,
@@ -171,14 +171,14 @@ function ChipRow({
     style: {
       fontSize: 'var(--fs-row-title)',
       fontWeight: 700,
-      lineHeight: 1.25
+      lineHeight: 1.3
     }
   }, title), sub != null && /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 'var(--fs-sub)',
       color: 'var(--text-muted)',
       marginTop: '4px',
-      lineHeight: 1.3
+      lineHeight: 1.4
     }
   }, sub)));
 }
@@ -363,7 +363,7 @@ Object.assign(__ds_scope, { TrackArrow });
 // components/structure/GoverningHeadline.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Zone 2 - the centered one-line judgment that governs the slide. */
+/** Zone 2 — the centered one-line judgment ('판단') that governs the slide. */
 function GoverningHeadline({
   children,
   style,
@@ -390,6 +390,185 @@ function GoverningHeadline({
 Object.assign(__ds_scope, { GoverningHeadline });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/structure/GoverningHeadline.jsx", error: String((e && e.message) || e) }); }
 
+// components/structure/SectionDivider.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/**
+ * 간지 — a full-bleed NAVY section-divider slide. Big ghost section number on the
+ * right, kicker + orange accent rule + section title + optional description on the
+ * left, white SKT mark and page number in the footer. Gives the deck section rhythm.
+ */
+function SectionDivider({
+  number = '01',
+  kicker = 'SECTION',
+  title,
+  desc,
+  page,
+  total,
+  logoSrc = 'assets/skt-logo-white.svg',
+  style,
+  ...rest
+}) {
+  const pageLabel = page != null ? total != null ? `${page} / ${total}` : String(page) : null;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      position: 'relative',
+      width: 'var(--slide-w, 1280px)',
+      height: 'var(--slide-h, 720px)',
+      background: 'var(--navy)',
+      color: 'var(--text-invert)',
+      fontFamily: 'var(--font-slide)',
+      overflow: 'hidden',
+      wordBreak: 'keep-all',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      right: '40px',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      fontSize: '360px',
+      fontWeight: 800,
+      lineHeight: 1,
+      color: 'var(--navy-600)',
+      letterSpacing: '-8px',
+      userSelect: 'none'
+    }
+  }, number), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 'var(--margin-x)',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      maxWidth: '760px'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 'var(--fs-divide-kicker)',
+      fontWeight: 800,
+      letterSpacing: '6px',
+      color: 'var(--navy-200)'
+    }
+  }, kicker, " ", number), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '64px',
+      height: '4px',
+      background: 'var(--skt-orange)',
+      margin: '18px 0 22px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 'var(--fs-divider-title)',
+      fontWeight: 800,
+      lineHeight: 1.2
+    }
+  }, title), desc != null && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: '18px',
+      fontSize: 'var(--fs-divider-desc)',
+      fontWeight: 400,
+      lineHeight: 1.5,
+      color: 'var(--navy-200)',
+      maxWidth: '620px'
+    }
+  }, desc)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 'var(--margin-x)',
+      right: 'var(--margin-x)',
+      bottom: '28px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("img", {
+    src: logoSrc,
+    alt: "SK telecom",
+    style: {
+      height: 'var(--footer-logo-h)',
+      display: 'block'
+    }
+  }), pageLabel != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 'var(--fs-footer)',
+      fontWeight: 700,
+      color: 'var(--navy-200)'
+    }
+  }, pageLabel)));
+}
+Object.assign(__ds_scope, { SectionDivider });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/structure/SectionDivider.jsx", error: String((e && e.message) || e) }); }
+
+// components/structure/SlideFooter.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/**
+ * Footer chrome — SKT brand mark at the bottom-left and the page number at the
+ * bottom-right, separated from the body by a thin hairline. Sits below the
+ * TakeawayBar in the reserved footer zone.
+ */
+function SlideFooter({
+  page,
+  total,
+  logoSrc = 'assets/skt-logo.svg',
+  source,
+  showRule = true,
+  style,
+  ...rest
+}) {
+  const pageLabel = page != null ? total != null ? `${page} / ${total}` : String(page) : null;
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      position: 'absolute',
+      left: 'var(--margin-x)',
+      right: 'var(--margin-x)',
+      top: 'var(--zone-footer-y)',
+      height: 'var(--zone-footer-h)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      ...style
+    }
+  }, rest), showRule && /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: '-10px',
+      height: '1px',
+      background: 'var(--footer-line)'
+    }
+  }), /*#__PURE__*/React.createElement("img", {
+    src: logoSrc,
+    alt: "SK telecom",
+    style: {
+      height: 'var(--footer-logo-h)',
+      display: 'block',
+      flex: 'none'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px'
+    }
+  }, source != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 'var(--fs-footer)',
+      color: 'var(--text-muted)'
+    }
+  }, source), pageLabel != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 'var(--fs-footer)',
+      fontWeight: 700,
+      color: 'var(--text-muted)'
+    }
+  }, pageLabel)));
+}
+Object.assign(__ds_scope, { SlideFooter });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/structure/SlideFooter.jsx", error: String((e && e.message) || e) }); }
+
 // components/structure/SlideFrame.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
@@ -409,6 +588,8 @@ function SlideFrame({
       fontFamily: 'var(--font-slide)',
       fontWeight: 400,
       overflow: 'hidden',
+      wordBreak: 'keep-all',
+      overflowWrap: 'break-word',
       ...style
     }
   }, rest), children);
@@ -419,10 +600,14 @@ Object.assign(__ds_scope, { SlideFrame });
 // components/structure/SlideHeader.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Zone 1 - deck name | section label plus the 2px underline rule. */
+/**
+ * Zone 1 — deck name | section label, an optional top-right subtitle (소제목),
+ * plus the 2px underline rule.
+ */
 function SlideHeader({
   deck = 'Idea Pitch',
   section,
+  subtitle,
   showRule = true,
   style,
   ...rest
@@ -452,7 +637,17 @@ function SlideHeader({
       fontSize: 'var(--fs-section)',
       fontWeight: 800
     }
-  }, section)), showRule && /*#__PURE__*/React.createElement("div", {
+  }, section)), subtitle != null && /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      right: 'var(--margin-x)',
+      top: 'calc(var(--zone-header-top) + 12px)',
+      fontSize: 'var(--fs-subtitle)',
+      fontWeight: 700,
+      color: 'var(--text-muted)',
+      letterSpacing: '.2px'
+    }
+  }, subtitle), showRule && /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
       left: 'var(--margin-x)',
@@ -469,7 +664,7 @@ Object.assign(__ds_scope, { SlideHeader });
 // components/structure/TakeawayBar.jsx
 try { (() => {
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
-/** Zone 4 - the navy conclusion bar carrying the slide's action implication. */
+/** Zone 4 — the navy conclusion bar carrying the slide's action implication ('행동 함의'). */
 function TakeawayBar({
   children,
   style,
@@ -499,6 +694,120 @@ function TakeawayBar({
 Object.assign(__ds_scope, { TakeawayBar });
 })(); } catch (e) { __ds_ns.__errors.push({ path: "components/structure/TakeawayBar.jsx", error: String((e && e.message) || e) }); }
 
+// components/structure/TitleSlide.jsx
+try { (() => {
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+/**
+ * 표지 — the deck cover / main title slide. Full-bleed NAVY with a thin orange top
+ * band, spaced eyebrow, orange accent rule, large deck title, subtitle, and a bottom
+ * meta row (white SKT mark left · date/org/classification right).
+ */
+function TitleSlide({
+  eyebrow = 'IDEA PITCH',
+  title,
+  subtitle,
+  meta,
+  logoSrc = 'assets/skt-logo-white.svg',
+  style,
+  ...rest
+}) {
+  return /*#__PURE__*/React.createElement("div", _extends({
+    style: {
+      position: 'relative',
+      width: 'var(--slide-w, 1280px)',
+      height: 'var(--slide-h, 720px)',
+      background: 'var(--navy)',
+      color: 'var(--text-invert)',
+      fontFamily: 'var(--font-slide)',
+      overflow: 'hidden',
+      wordBreak: 'keep-all',
+      ...style
+    }
+  }, rest), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '6px',
+      background: 'var(--skt-orange)'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 'var(--margin-x)',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      maxWidth: '940px'
+    }
+  }, eyebrow != null && /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 'var(--fs-title-eyebrow)',
+      fontWeight: 800,
+      letterSpacing: '8px',
+      color: 'var(--navy-200)'
+    }
+  }, eyebrow), /*#__PURE__*/React.createElement("div", {
+    style: {
+      width: '72px',
+      height: '5px',
+      background: 'var(--skt-orange)',
+      margin: '22px 0 26px'
+    }
+  }), /*#__PURE__*/React.createElement("div", {
+    style: {
+      fontSize: 'var(--fs-title)',
+      fontWeight: 800,
+      lineHeight: 1.15,
+      textWrap: 'balance'
+    }
+  }, title), subtitle != null && /*#__PURE__*/React.createElement("div", {
+    style: {
+      marginTop: '22px',
+      fontSize: 'var(--fs-title-sub)',
+      fontWeight: 700,
+      color: 'var(--navy-200)',
+      lineHeight: 1.45,
+      maxWidth: '760px'
+    }
+  }, subtitle)), /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 'var(--margin-x)',
+      right: 'var(--margin-x)',
+      bottom: '38px',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: '-18px',
+      height: '1px',
+      background: 'var(--navy-600)'
+    }
+  }), /*#__PURE__*/React.createElement("img", {
+    src: logoSrc,
+    alt: "SK telecom",
+    style: {
+      height: '22px',
+      display: 'block'
+    }
+  }), meta != null && /*#__PURE__*/React.createElement("span", {
+    style: {
+      fontSize: 'var(--fs-title-meta)',
+      fontWeight: 700,
+      color: 'var(--navy-200)',
+      letterSpacing: '.3px'
+    }
+  }, meta)));
+}
+Object.assign(__ds_scope, { TitleSlide });
+})(); } catch (e) { __ds_ns.__errors.push({ path: "components/structure/TitleSlide.jsx", error: String((e && e.message) || e) }); }
+
 __ds_ns.ChipRow = __ds_scope.ChipRow;
 
 __ds_ns.EmphasisBand = __ds_scope.EmphasisBand;
@@ -517,10 +826,16 @@ __ds_ns.TrackArrow = __ds_scope.TrackArrow;
 
 __ds_ns.GoverningHeadline = __ds_scope.GoverningHeadline;
 
+__ds_ns.SectionDivider = __ds_scope.SectionDivider;
+
+__ds_ns.SlideFooter = __ds_scope.SlideFooter;
+
 __ds_ns.SlideFrame = __ds_scope.SlideFrame;
 
 __ds_ns.SlideHeader = __ds_scope.SlideHeader;
 
 __ds_ns.TakeawayBar = __ds_scope.TakeawayBar;
+
+__ds_ns.TitleSlide = __ds_scope.TitleSlide;
 
 })();

@@ -1,16 +1,18 @@
-<!-- @dsCard group="Layout" viewport="700x420" name="4-Zone 레이아웃" subtitle="Header → Headline → Cards → Takeaway" -->
+<!-- @dsCard group="Layout" viewport="700x430" name="5-Zone 레이아웃 (v2)" subtitle="Header(소제목) → Headline → Cards → Takeaway → Footer(로고·페이지)" -->
 <!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><link rel="stylesheet" href="../styles.css"/>
 <style>
 body{margin:0;background:var(--bg-app);font-family:var(--font-sans);padding:16px}
 .canvas{position:relative;width:668px;height:376px;border:1px solid var(--border-subtle);background:#fff}
-.z{position:absolute;border:1.5px dashed var(--blue);color:var(--blue);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.4}
+.z{position:absolute;border:1.5px dashed var(--blue);color:var(--blue);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.3;box-sizing:border-box}
+.zf{border-color:var(--skt-orange);color:var(--skt-orange)}
 </style></head><body>
 <div class="canvas">
-  <div class="z" style="left:22px;top:10px;width:624px;height:40px">① Header — 덱이름 | 섹션명 + 룰 (top 22→94px)</div>
-  <div class="z" style="left:22px;top:58px;width:624px;height:30px">② Governing Headline — 35px EB 중앙 '판단' 한 줄</div>
-  <div class="z" style="left:22px;top:98px;width:300px;height:232px">③-L 좌측 메인 카드<br/>(576px)</div>
-  <div class="z" style="left:338px;top:98px;width:308px;height:110px">③-R 우측 서브 카드</div>
-  <div class="z" style="left:338px;top:220px;width:308px;height:110px">③-R 우측 서브 카드</div>
-  <div class="z" style="left:22px;top:340px;width:624px;height:28px">④ Takeaway Bar — NAVY, '행동 함의' 결론</div>
+  <div class="z" style="left:16px;top:8px;width:634px;height:38px">① Header — 덱이름 | 섹션명 · <b style="margin:0 4px">우측 상단 소제목</b> + 룰</div>
+  <div class="z" style="left:16px;top:52px;width:634px;height:28px">② Governing Headline — 35px EB 중앙 '판단' 한 줄</div>
+  <div class="z" style="left:16px;top:88px;width:308px;height:214px">③-L 좌측 메인 카드 (576px)</div>
+  <div class="z" style="left:334px;top:88px;width:316px;height:102px">③-R 우측 서브 카드</div>
+  <div class="z" style="left:334px;top:200px;width:316px;height:102px">③-R 우측 서브 카드</div>
+  <div class="z" style="left:16px;top:310px;width:634px;height:30px">④ Takeaway Bar — NAVY '행동 함의'</div>
+  <div class="z zf" style="left:16px;top:346px;width:634px;height:22px">⑤ Footer — SKT 로고(좌) · 페이지 번호(우)</div>
 </div>
 </body></html>

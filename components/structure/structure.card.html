@@ -1,0 +1,39 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Structure — 슬라이드 골격" subtitle="Header(소제목) · Headline · Takeaway · Footer(로고+페이지) · 간지" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="../../styles.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+html,body{margin:0;background:var(--surface-tint);font-family:var(--font-sans)}
+.stage{padding:16px;display:flex;gap:16px}
+.frame{width:432px;height:243px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.12);flex:none}
+.frame .scale{transform:scale(.3375);transform-origin:top left}
+.divi{width:216px;height:243px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.12);flex:none}
+.divi .scale{transform:scale(.16875);transform-origin:top left}
+</style></head><body>
+<div class="stage">
+  <div class="frame"><div class="scale" id="body"></div></div>
+  <div class="divi"><div class="scale" id="divider"></div></div>
+</div>
+<script type="text/babel">
+const { SlideFrame, SlideHeader, GoverningHeadline, SectionCard, ChipRow, EmphasisBand, TakeawayBar, SlideFooter, SectionDivider } = window.IdeaPitchSKTDesignSystem_14362e;
+const L = '../../assets/skt-logo.svg', LW = '../../assets/skt-logo-white.svg';
+ReactDOM.createRoot(document.getElementById('body')).render(
+  <SlideFrame>
+    <SlideHeader section="① 상황 인식" subtitle="2026 사업전략 보고" />
+    <GoverningHeadline>핵심 판단 한 줄 — 슬라이드를 지배하는 메시지</GoverningHeadline>
+    <SectionCard label="당사 방향성" subhead="현황 요약 한 줄" style={{left:43,top:187,width:1194,height:396}}>
+      <ChipRow label="주제 영역" title="제안은 많으나 아직 초기 단계" sub="→ 사례 A · 사례 B · 사례 C" style={{left:81,top:250,width:520}}/>
+      <EmphasisBand style={{left:81,top:500,width:1030}}>▶ 중간 결론 — 방향성은 도출, 전제 조건은 미확정</EmphasisBand>
+    </SectionCard>
+    <TakeawayBar>행동 함의 결론 — Headline과 다른 문장으로</TakeawayBar>
+    <SlideFooter page={3} total={12} logoSrc={L} source="출처: 내부 분석" />
+  </SlideFrame>
+);
+ReactDOM.createRoot(document.getElementById('divider')).render(
+  <SectionDivider number="02" title="방향성 제언" desc="투자의 시계와 설계의 시계를 분리한 Two-Track 전략" page={7} total={12} logoSrc={LW}/>
+);
+</script>
+</body></html>

@@ -25,7 +25,7 @@ footer{max-width:1480px;margin:0 auto;padding:0 40px 60px;color:var(--text-muted
 <header>
 <div class="mark"><span class="pillm">Idea Pitch</span><span class="badgem">Design System</span></div>
 <h1>Idea Pitch — Design System</h1>
-<div class="sub">NAVY #1F3864 지배의 라이트 퍼스트 컨설팅 덱 디자인 시스템. Header → Governing Headline → Section Cards → Takeaway Bar의 4-Zone 구조와 정보 시제(과거 STEEL / 계획 NAVY / 미확정 점선) 규칙 위에 세워졌다. 기본 서체는 <a href="https://hangeul.naver.com/fonts/search?f=nanum" target="_blank">나눔스퀘어</a>. 각 카드를 클릭하면 원본을 볼 수 있으며, 동일 시스템의 <b>python-pptx 생성기</b>가 <a href="ppt/generate_template.py">ppt/</a>에 포함된다. 가이드는 <a href="readme.md">readme.md</a> 참고.</div>
+<div class="sub">NAVY #1F3864 지배의 라이트 퍼스트 컨설팅 덱 디자인 시스템. Header(우측 상단 소제목) → Governing Headline → Section Cards → Takeaway Bar → Footer(SKT 로고 + 페이지 번호)의 5-Zone 구조와 정보 시제(과거 STEEL / 계획 NAVY / 미확정 점선) 규칙 위에 세워졌다. 섹션 사이에는 풀블리드 NAVY 간지를 넣는다. 기본 서체는 <a href="https://hangeul.naver.com/fonts/search?f=nanum" target="_blank">나눔스퀘어</a>. 각 카드를 클릭하면 원본을 볼 수 있으며, 동일 시스템의 <b>python-pptx 생성기</b>가 <a href="ppt/generate_template.py">ppt/</a>에 포함된다. 가이드는 <a href="readme.md">readme.md</a> 참고.</div>
 </header>
 <main id="main"></main>
 <footer>
@@ -33,21 +33,32 @@ Font: 나눔스퀘어 NanumSquare (웹: CDN · PPT: NanumSquareOTF_ac 로컬 설
 </footer>
 <script>
 const groups = {
+ "Brand": [
+  ["guidelines/brand-logo.card.html","SKT Brand Mark","컬러 원본(라이트) + 화이트 녹아웃(다크/간지)",700,180],
+  ["guidelines/brand-footer.card.html","Footer 크롬 (v2)","하단 SKT 로고(좌) · 페이지 번호(우) · 헤어라인",700,130],
+  ["guidelines/brand-subtitle.card.html","Header 소제목 (v2)","덱이름 | 섹션명 (좌) · 소제목 (우측 상단, muted)",700,120]],
  "Colors": [
   ["guidelines/color-core.card.html","Core Palette","NAVY · BLUE · SKY · STEEL · RED",700,170],
+  ["guidelines/color-navy-ramp.card.html","NAVY Ramp","--navy-50 → --navy-900 (700 = base)",700,120],
   ["guidelines/color-tense.card.html","정보 시제(Tense) 규칙","과거 STEEL · 계획 NAVY · 미확정 점선",700,170]],
  "Type": [
-  ["guidelines/type-scale.card.html","나눔스퀘어 Type Scale","EB 800 / B 700 / R 400",700,260]],
+  ["guidelines/type-scale.card.html","나눔스퀘어 Type Scale","EB 800 / B 700 / R 400",700,260],
+  ["guidelines/type-weights.card.html","Weight 토큰","가짜 볼드 금지 — 웨이트로만 표현",700,150]],
  "Layout": [
-  ["guidelines/layout-zones.card.html","4-Zone 레이아웃","Header → Headline → Cards → Takeaway",700,420]],
+  ["guidelines/layout-zones.card.html","5-Zone 레이아웃 (v2)","Header(소제목) → Headline → Cards → Takeaway → Footer",700,430],
+  ["guidelines/layout-grid.card.html","그리드 & 마진","1280×720 · 마진 43px · 좌576 / 우588",700,230],
+  ["guidelines/spacing.card.html","Spacing · Radii 토큰","필/바 캡슐 & 라운드, 칩·개체는 직각",700,170]],
  "Components": [
-  ["guidelines/components.card.html","핵심 컴포넌트","Pill Card · Chip Row · Band · Timeline · Entity · Track",700,430]],
+  ["components/blocks/blocks.card.html","Blocks — 본문 구성요소","SectionCard · ChipRow · Band · Entity · Timeline · Track · Flow",700,460],
+  ["components/structure/structure.card.html","Structure — 슬라이드 골격","Header · Headline · Takeaway · Footer · 간지",700,430]],
  "Templates": [
-  ["templates/idea-pitch-deck/IdeaPitchDeck.dc.html","Idea Pitch Deck","키보드 내비게이션·발표 모드 지원 3장 덱 (.dc.html)",1280,720]],
+  ["templates/idea-pitch-deck/IdeaPitchDeck.dc.html","Idea Pitch Deck","표지·간지·진단형·제언형·빈 5장 덱 (.dc.html)",1280,720]],
  "Slides (HTML)": [
+  ["slides/title.slide.html","표지 — Title Cover","풀블리드 NAVY · eyebrow + 대제목 + SKT 로고 (v2)",1280,720],
+  ["slides/divider.slide.html","간지 — 섹션 구분","대형 섹션 번호 + 오렌지 액센트 + 화이트 로고 (v2)",1280,720],
   ["slides/diagnosis.slide.html","진단형 — 상황 인식","칩 행 스택 + 타임라인 + 구조 비교",1280,720],
   ["slides/proposal.slide.html","제언형 — 방향성 제언","전환 다이어그램 + Two-Track",1280,720],
-  ["slides/blank.slide.html","빈 템플릿","1+2 구성 스타터",1280,720]],
+  ["slides/blank.slide.html","빈 템플릿","1+2 구성 스타터 (footer·소제목 포함)",1280,720]],
  "PPT Template (python-pptx)": [
   ["docs/templates/05-idea-pitch.png","진단형 예시 (.pptx)","generate_template.py 렌더링",1280,720],
   ["docs/templates/06-idea-pitch.png","제언형 예시 (.pptx)","generate_template.py 렌더링",1280,720],

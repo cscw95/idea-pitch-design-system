@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" viewport="700x460" name="Blocks — 본문 구성요소" subtitle="SectionCard · ChipRow · EmphasisBand · EntityBox(시제) · Timeline · TrackArrow · FlowArrow" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/>
+<link rel="stylesheet" href="../../styles.css"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+html,body{margin:0;background:var(--surface-tint);font-family:var(--font-sans);color:var(--ink)}
+.grid{padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:34px 26px}
+.cell{position:relative;height:120px}
+.cap{position:absolute;left:0;bottom:-18px;font-size:11px;color:var(--text-muted)}
+</style></head><body>
+<div class="grid" id="root"></div>
+<script type="text/babel">
+const NS = window.IdeaPitchSKTDesignSystem_14362e;
+const { SectionCard, ChipRow, EmphasisBand, LabelChip, EntityBox, Timeline, TrackArrow, FlowArrow } = NS;
+const Cell = ({cap, children}) => <div className="cell">{children}<div className="cap">{cap}</div></div>;
+ReactDOM.createRoot(document.getElementById('root')).render(<>
+  <Cell cap=".SectionCard — 필 라벨 카드">
+    <SectionCard label="섹션 라벨" subhead="카드 서브헤드" style={{left:0,top:14,width:318,height:96}}/>
+  </Cell>
+  <Cell cap=".ChipRow — 칩 + 제목 + → 보조">
+    <ChipRow label="주제 영역" title="칩 행 제목 — Bold" sub="→ 보조 설명은 muted 처리" style={{left:0,top:14,width:318}}/>
+  </Cell>
+  <Cell cap=".EmphasisBand / .LabelChip">
+    <LabelChip style={{position:'absolute',left:0,top:8,width:96,height:38}}>라벨 칩</LabelChip>
+    <EmphasisBand style={{left:0,top:60,width:318}}>Emphasis Band — 중간 결론</EmphasisBand>
+  </Cell>
+  <Cell cap=".EntityBox — 시제 3종 (과거·계획·미확정)">
+    <EntityBox tense="past" title="현황" style={{left:0,top:22,width:96,height:66}}/>
+    <EntityBox tense="plan" title="계획" style={{left:111,top:22,width:96,height:66}}/>
+    <EntityBox tense="future" title="미확정" style={{left:222,top:22,width:96,height:66}}/>
+  </Cell>
+  <Cell cap=".Timeline — done/open 노드, '현재'만 RED">
+    <Timeline style={{left:8,top:20,width:300}} lineTop="14px" items={[
+      {label:"'23.6",sub:'수립'},{label:'현재',sub:'경쟁',state:'open',hot:true},
+      {label:"'29",sub:'표준'},{label:"'31~",sub:'상용',state:'open'}]}/>
+  </Cell>
+  <Cell cap=".TrackArrow / .FlowArrow — Two-Track · 전환">
+    <TrackArrow variant="wait" style={{left:0,top:8,width:150,height:34}}>Wait &amp; See</TrackArrow>
+    <TrackArrow variant="navy" style={{left:162,top:8,width:156,height:34}}>확보 가속</TrackArrow>
+    <FlowArrow direction="right" style={{left:0,top:64,width:64,height:36}}/>
+    <FlowArrow direction="up" color="var(--steel)" style={{left:96,top:52,width:36,height:56}}/>
+  </Cell>
+</>);
+</script>
+</body></html>

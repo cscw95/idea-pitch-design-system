@@ -1,0 +1,18 @@
+<!-- @dsCard group="Brand" viewport="700x180" name="SKT Brand Mark" subtitle="컬러 원본(라이트) + 화이트 녹아웃(다크/간지)" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><link rel="stylesheet" href="../styles.css"/>
+<style>
+body{margin:0;background:var(--bg-app);font-family:var(--font-sans);padding:20px;display:flex;gap:16px}
+.tile{flex:1;border-radius:8px;height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.tile img{height:34px}
+.lbl{font-size:11px;color:var(--text-muted)}
+.dk .lbl{color:var(--navy-200)}
+.swatch{display:flex;gap:8px;align-items:center;font-family:var(--font-mono);font-size:11px}
+.chip{width:16px;height:16px;border-radius:3px}
+</style></head><body>
+<div class="tile" style="border:1px solid var(--border-subtle)"><img src="../assets/skt-logo.svg" alt="SK telecom"/><div class="lbl">assets/skt-logo.svg · 라이트 배경</div></div>
+<div class="tile dk" style="background:var(--navy)"><img src="../assets/skt-logo-white.svg" alt="SK telecom"/><div class="lbl">assets/skt-logo-white.svg · 다크/간지</div></div>
+<div class="tile" style="border:1px solid var(--border-subtle);flex-direction:column;gap:10px">
+  <div class="swatch"><span class="chip" style="background:var(--skt-red)"></span>--skt-red · #EA002C</div>
+  <div class="swatch"><span class="chip" style="background:var(--skt-orange)"></span>--skt-orange · #FF7A00</div>
+</div>
+</body></html>

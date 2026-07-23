@@ -1,0 +1,353 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/blocks/**",
+              "components/structure/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:NanumSquare))/i]",
+        "message": "Font not provided by the design system. Available: NanumSquare."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ChipRow'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|title|sub|chipWidth|style|key|ref|className|style|children)$/]",
+        "message": "<ChipRow> doesn't accept that prop. Declared props: label, title, sub, chipWidth, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='EmphasisBand'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<EmphasisBand> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='EntityBox'] > JSXAttribute > JSXIdentifier[name!=/^(?:tense|title|sub|children|style|key|ref|className|style|children)$/]",
+        "message": "<EntityBox> doesn't accept that prop. Declared props: tense, title, sub, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='EntityBox'] > JSXAttribute[name.name='tense'] > Literal[value!=/^(?:past|plan|future)$/]",
+        "message": "<EntityBox> tense must be one of 'past' | 'plan' | 'future'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FlowArrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:direction|color|style|key|ref|className|style|children)$/]",
+        "message": "<FlowArrow> doesn't accept that prop. Declared props: direction, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='FlowArrow'] > JSXAttribute[name.name='direction'] > Literal[value!=/^(?:right|up)$/]",
+        "message": "<FlowArrow> direction must be one of 'right' | 'up'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='GoverningHeadline'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<GoverningHeadline> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='LabelChip'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<LabelChip> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|subhead|children|style|key|ref|className|style|children)$/]",
+        "message": "<SectionCard> doesn't accept that prop. Declared props: label, subhead, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionDivider'] > JSXAttribute > JSXIdentifier[name!=/^(?:number|kicker|title|desc|page|total|logoSrc|style|key|ref|className|style|children)$/]",
+        "message": "<SectionDivider> doesn't accept that prop. Declared props: number, kicker, title, desc, page, total, logoSrc, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SlideFooter'] > JSXAttribute > JSXIdentifier[name!=/^(?:page|total|logoSrc|source|showRule|style|key|ref|className|style|children)$/]",
+        "message": "<SlideFooter> doesn't accept that prop. Declared props: page, total, logoSrc, source, showRule, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SlideFrame'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<SlideFrame> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SlideHeader'] > JSXAttribute > JSXIdentifier[name!=/^(?:deck|section|subtitle|showRule|style|key|ref|className|style|children)$/]",
+        "message": "<SlideHeader> doesn't accept that prop. Declared props: deck, section, subtitle, showRule, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TakeawayBar'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|style|key|ref|className|style|children)$/]",
+        "message": "<TakeawayBar> doesn't accept that prop. Declared props: children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TimelineItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|sub|state|hot|key|ref|className|style|children)$/]",
+        "message": "<TimelineItem> doesn't accept that prop. Declared props: label, sub, state, hot."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TimelineItem'] > JSXAttribute[name.name='state'] > Literal[value!=/^(?:done|open)$/]",
+        "message": "<TimelineItem> state must be one of 'done' | 'open'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TitleSlide'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|subtitle|meta|logoSrc|style|key|ref|className|style|children)$/]",
+        "message": "<TitleSlide> doesn't accept that prop. Declared props: eyebrow, title, subtitle, meta, logoSrc, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrackArrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|children|style|key|ref|className|style|children)$/]",
+        "message": "<TrackArrow> doesn't accept that prop. Declared props: variant, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='TrackArrow'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:navy|steel|wait)$/]",
+        "message": "<TrackArrow> variant must be one of 'navy' | 'steel' | 'wait'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "ChipRow": {
+        "replaces": []
+      },
+      "EmphasisBand": {
+        "replaces": []
+      },
+      "EntityBox": {
+        "replaces": []
+      },
+      "FlowArrow": {
+        "replaces": []
+      },
+      "GoverningHeadline": {
+        "replaces": []
+      },
+      "LabelChip": {
+        "replaces": []
+      },
+      "SectionCard": {
+        "replaces": []
+      },
+      "SectionDivider": {
+        "replaces": []
+      },
+      "SlideFooter": {
+        "replaces": []
+      },
+      "SlideFrame": {
+        "replaces": []
+      },
+      "SlideHeader": {
+        "replaces": []
+      },
+      "TakeawayBar": {
+        "replaces": []
+      },
+      "TimelineItem": {
+        "replaces": []
+      },
+      "TitleSlide": {
+        "replaces": []
+      },
+      "TrackArrow": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--band-h",
+      "--bg-app",
+      "--blue",
+      "--border-subtle",
+      "--chip-h",
+      "--col-left-w",
+      "--col-right-w",
+      "--content-w",
+      "--font-mono",
+      "--font-sans",
+      "--font-slide",
+      "--footer-line",
+      "--footer-logo-h",
+      "--fs-body",
+      "--fs-caption",
+      "--fs-card-head",
+      "--fs-chip",
+      "--fs-divide-kicker",
+      "--fs-divider-desc",
+      "--fs-divider-num",
+      "--fs-divider-title",
+      "--fs-footer",
+      "--fs-header",
+      "--fs-headline",
+      "--fs-pill",
+      "--fs-row-title",
+      "--fs-section",
+      "--fs-sub",
+      "--fs-subtitle",
+      "--fs-takeaway",
+      "--fs-title",
+      "--fs-title-eyebrow",
+      "--fs-title-meta",
+      "--fs-title-sub",
+      "--gutter",
+      "--ink",
+      "--margin-x",
+      "--navy",
+      "--navy-100",
+      "--navy-200",
+      "--navy-300",
+      "--navy-400",
+      "--navy-50",
+      "--navy-500",
+      "--navy-600",
+      "--navy-700",
+      "--navy-800",
+      "--navy-900",
+      "--pill-h",
+      "--radius-bar",
+      "--radius-card",
+      "--radius-none",
+      "--radius-pill",
+      "--red",
+      "--skt-orange",
+      "--skt-red",
+      "--sky",
+      "--slide-h",
+      "--slide-w",
+      "--steel",
+      "--surface-card",
+      "--surface-tint",
+      "--tense-future",
+      "--tense-past",
+      "--tense-plan",
+      "--text-invert",
+      "--text-link",
+      "--text-link-hover",
+      "--text-muted",
+      "--text-primary",
+      "--text-secondary",
+      "--w-b",
+      "--w-eb",
+      "--w-l",
+      "--w-r",
+      "--zone-body-h",
+      "--zone-body-y",
+      "--zone-footer-h",
+      "--zone-footer-y",
+      "--zone-header-top",
+      "--zone-headline-y",
+      "--zone-rule-y",
+      "--zone-takeaway-h",
+      "--zone-takeaway-y"
+    ],
+    "tokenKinds": {
+      "--navy": "color",
+      "--blue": "color",
+      "--navy-50": "color",
+      "--navy-100": "color",
+      "--navy-200": "color",
+      "--navy-300": "color",
+      "--navy-400": "color",
+      "--navy-500": "color",
+      "--navy-600": "color",
+      "--navy-700": "color",
+      "--navy-800": "color",
+      "--navy-900": "color",
+      "--sky": "color",
+      "--steel": "color",
+      "--red": "color",
+      "--skt-red": "color",
+      "--skt-orange": "color",
+      "--bg-app": "color",
+      "--surface-card": "color",
+      "--surface-tint": "color",
+      "--border-subtle": "color",
+      "--ink": "color",
+      "--text-primary": "font",
+      "--text-secondary": "font",
+      "--text-muted": "font",
+      "--text-link": "font",
+      "--text-link-hover": "font",
+      "--text-invert": "font",
+      "--footer-line": "color",
+      "--tense-past": "color",
+      "--tense-plan": "color",
+      "--tense-future": "color",
+      "--font-sans": "font",
+      "--font-slide": "font",
+      "--font-mono": "font",
+      "--w-l": "other",
+      "--w-r": "other",
+      "--w-b": "other",
+      "--w-eb": "other",
+      "--fs-headline": "spacing",
+      "--fs-header": "spacing",
+      "--fs-section": "spacing",
+      "--fs-subtitle": "spacing",
+      "--fs-takeaway": "spacing",
+      "--fs-card-head": "spacing",
+      "--fs-pill": "spacing",
+      "--fs-chip": "spacing",
+      "--fs-body": "spacing",
+      "--fs-row-title": "spacing",
+      "--fs-sub": "spacing",
+      "--fs-caption": "spacing",
+      "--fs-footer": "spacing",
+      "--fs-divider-num": "spacing",
+      "--fs-divide-kicker": "spacing",
+      "--fs-divider-title": "spacing",
+      "--fs-divider-desc": "spacing",
+      "--fs-title-eyebrow": "spacing",
+      "--fs-title": "spacing",
+      "--fs-title-sub": "spacing",
+      "--fs-title-meta": "spacing",
+      "--slide-w": "spacing",
+      "--slide-h": "spacing",
+      "--margin-x": "spacing",
+      "--content-w": "spacing",
+      "--gutter": "spacing",
+      "--col-left-w": "spacing",
+      "--col-right-w": "spacing",
+      "--zone-header-top": "spacing",
+      "--zone-rule-y": "spacing",
+      "--zone-headline-y": "spacing",
+      "--zone-body-y": "spacing",
+      "--zone-body-h": "spacing",
+      "--zone-takeaway-y": "spacing",
+      "--zone-takeaway-h": "spacing",
+      "--zone-footer-y": "spacing",
+      "--zone-footer-h": "spacing",
+      "--pill-h": "spacing",
+      "--chip-h": "spacing",
+      "--band-h": "spacing",
+      "--footer-logo-h": "spacing",
+      "--radius-card": "radius",
+      "--radius-bar": "radius",
+      "--radius-pill": "radius",
+      "--radius-none": "radius"
+    },
+    "fontFamilies": [
+      "NanumSquare"
+    ]
+  }
+}

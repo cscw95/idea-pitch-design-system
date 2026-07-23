@@ -1,0 +1,21 @@
+<!-- @dsCard group="Spacing" viewport="700x170" name="Spacing · Radii 토큰" subtitle="필/바 캡슐 & 라운드, 칩·개체는 직각" -->
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"/><link rel="stylesheet" href="../styles.css"/>
+<style>
+body{margin:0;background:var(--bg-app);font-family:var(--font-sans);color:var(--ink);padding:20px;display:flex;gap:28px;align-items:center}
+.grp{display:flex;flex-direction:column;gap:8px}
+.row{display:flex;align-items:center;gap:10px;font-size:12px}
+.dot{background:var(--navy);height:20px}
+.tag{font-family:var(--font-mono);font-size:11px;color:var(--text-muted)}
+.shape{width:60px;height:40px;background:var(--navy);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:800}
+</style></head><body>
+<div class="grp">
+  <div class="row"><span class="dot" style="width:29px"></span><span class="tag">--gutter 29px</span></div>
+  <div class="row"><span class="dot" style="width:43px"></span><span class="tag">--margin-x 43px</span></div>
+  <div class="row"><span class="dot" style="width:17px"></span><span class="tag">chip gap 17px</span></div>
+</div>
+<div class="grp" style="flex-direction:row;gap:14px">
+  <div style="text-align:center"><div class="shape" style="border-radius:999px;width:80px">pill</div><div class="tag" style="margin-top:5px">999px</div></div>
+  <div style="text-align:center"><div class="shape" style="border-radius:10px">card / bar</div><div class="tag" style="margin-top:5px">10px</div></div>
+  <div style="text-align:center"><div class="shape" style="border-radius:0">chip / entity</div><div class="tag" style="margin-top:5px">0 (직각)</div></div>
+</div>
+</body></html>
